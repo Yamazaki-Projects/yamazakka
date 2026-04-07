@@ -2,17 +2,16 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 export default function Footer() {
-  const { siteName, company, nav } = siteConfig;
+  const { company, nav } = siteConfig;
 
   return (
     <footer style={{ background: "#1a1a1a", color: "#fff", marginTop: 80 }}>
-      {/* メインフッター */}
       <div style={{ maxWidth: "var(--max-width)", margin: "0 auto", padding: "64px 24px 40px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48, marginBottom: 48 }}>
+        <div className="footer-grid">
           {/* ブランド */}
           <div>
-            <div style={{ fontFamily: "Georgia, serif", fontSize: "1.75rem", letterSpacing: "0.1em", marginBottom: 16, color: "var(--primary)" }}>
-              {siteNameEn()}
+            <div style={{ fontFamily: "Georgia, serif", fontSize: "1.6rem", letterSpacing: "0.1em", marginBottom: 16, color: "var(--primary)" }}>
+              {siteConfig.siteNameEn.toUpperCase()}
             </div>
             <p style={{ fontSize: "0.85rem", lineHeight: 1.8, opacity: 0.6, maxWidth: 300 }}>
               {siteConfig.description}
@@ -54,8 +53,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
-
-function siteNameEn() {
-  return siteConfig.siteNameEn.toUpperCase();
 }
