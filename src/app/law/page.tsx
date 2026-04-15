@@ -22,7 +22,7 @@ export default function LawPage() {
                 ["所在地", `〒${company.postalCode} ${company.address}`],
                 ["電話番号", `${company.tel}（${company.businessHours}）`],
                 ["メールアドレス", company.email],
-                ["販売URL", `https://www.${siteName.toLowerCase().replace(/\s+/g, "-")}.jp`],
+                ["販売URL", "https://www.yama-zakka.com"],
                 ["販売価格", "各商品ページに記載（税込）"],
                 ["商品代金以外の必要料金", `送料：${policy.shippingFee}（${policy.freeShippingOver.toLocaleString()}円以上で送料無料）`],
                 ["支払方法", "銀行振込"],
